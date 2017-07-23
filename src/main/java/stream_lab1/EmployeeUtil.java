@@ -7,6 +7,6 @@ import java.util.List;
  */
 public class EmployeeUtil {
     public static int totalPayment(List<Employee> employees) {
-        return 0;
+       return employees.parallelStream().mapToInt(Employee::getSalary).sum();
     }
 }
