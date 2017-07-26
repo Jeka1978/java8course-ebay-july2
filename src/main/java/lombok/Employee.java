@@ -20,7 +20,6 @@ public class Employee {
 
     @NonNull
     private String name;
-    @NonNull
     private Integer age;
     private int id;
     private double salary;

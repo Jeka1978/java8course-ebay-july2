@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
+import static stream_lab1.GENDER.FEMALE;
+import static stream_lab1.GENDER.MALE;
 
 /**
  * Created by Evegeny on 23/07/2017.
@@ -26,5 +28,44 @@ public class EmployeeUtilTest {
         Assert.assertEquals(10,totalPayment);
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Test
+    public void testIsManMoreExpensive(){
+        List<Employee> employees = Arrays.asList(
+                Employee.builder().gender(MALE).salary(4).build(),
+                Employee.builder().gender(MALE).salary(5).build(),
+                Employee.builder().gender(MALE).salary(6).build(),
+                Employee.builder().gender(FEMALE).salary(10).build(),
+                Employee.builder().gender(FEMALE).salary(6).build()
+        );
+
+        Assert.assertFalse(EmployeeUtil.isManMoreExpensive(employees));
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
 
 }

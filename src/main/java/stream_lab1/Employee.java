@@ -13,4 +13,5 @@ import lombok.NoArgsConstructor;
 public class Employee {
     private String name;
     private int salary;
+    private GENDER gender;
 }
